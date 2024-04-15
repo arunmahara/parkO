@@ -19,6 +19,9 @@ class UserRegisterView(generics.CreateAPIView):
     View to create user.
     """
     serializer_class = UserSerializer
+    http_method_names = ['post', 'options']
+    permission_classes = []
+    authentication_classes = []
 
     def post(self, request, *args, **kwargs):
         """
@@ -175,7 +178,7 @@ class ParkSlotsModelView(viewsets.ModelViewSet):
         return Response(response)
 
 
-@api_view(['POST'])
+@api_view(['POST', 'OPTIONS'])
 @permission_classes([IsAuthenticated])
 def book_park_slot(request):
     """

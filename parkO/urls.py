@@ -25,9 +25,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # jwt routes
-    path('api/v1/get-token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/v1/refresh-token/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('api/v1/verify-token/', TokenVerifyView.as_view(), name='token_verify'),
+    path('get-token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('refresh-token/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('verify-token/', TokenVerifyView.as_view(), name='token_verify'),
 
     path('api/', include("app.urls")),
 ]

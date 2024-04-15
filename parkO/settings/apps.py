@@ -12,8 +12,8 @@ INSTALLED_APPS = [
 
     # third party apps
     'rest_framework',
-    'corsheaders',
     'rest_framework_simplejwt',
+    'corsheaders',
 
     # user defined
     'app',
